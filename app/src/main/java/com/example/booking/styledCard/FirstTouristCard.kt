@@ -24,13 +24,7 @@ import com.example.booking.textFields.CustomTextFields_surname
 @Composable
 fun FirstTouristCard() {
     Card(
-        colors = CardDefaults.cardColors(
-            containerColor = Color.White,
-        ),
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(405.dp)
-    )
+        colors = CardDefaults.cardColors(containerColor = Color.White))
     {
 
         Column(
@@ -38,18 +32,15 @@ fun FirstTouristCard() {
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(all = 16.dp)
+
         ) {
-            Column {
+            Column(
+                verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 CustomTextFields_name()
-                Spacer(modifier = Modifier.height(8.dp))
                 CustomTextFields_surname()
-                Spacer(modifier = Modifier.height(8.dp))
                 CustomTextFields_bday()
-                Spacer(modifier = Modifier.height(8.dp))
                 CustomTextFields_citizen()
-                Spacer(modifier = Modifier.height(8.dp))
                 CustomTextFields_number()
-                Spacer(modifier = Modifier.height(8.dp))
                 CustomTextFields_expired()
             }
 

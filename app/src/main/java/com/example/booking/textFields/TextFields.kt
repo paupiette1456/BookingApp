@@ -24,7 +24,10 @@ import com.example.booking.textFields.FieldNumber
 import com.example.booking.ui.theme.circle
 import com.example.booking.ui.theme.field
 import com.example.booking.ui.theme.field_up
+import com.example.booking.ui.theme.gray
+import com.example.booking.ui.theme.gray_font
 import com.example.booking.ui.theme.sfProDisplay
+import com.example.booking.ui.theme.textHint
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -40,7 +43,7 @@ fun CustomTextFields_phone() {
         fillMaxWidth(),
         placeholder = {
                       Text(text = "+7 (951) 555-99-00",
-                          color = Color.Black)
+                          color = gray_font)
 
         },
         label = {
@@ -78,7 +81,7 @@ fun CustomTextFields_mail() {
         fillMaxWidth(),
         placeholder = {
                       Text(text = "examplemail.000@mail.ru",
-                          color = Color.Black)
+                          color = gray)
         },
         label = {
             Text("Почта",
@@ -112,7 +115,7 @@ fun CustomTextFields_name() {
         fillMaxWidth(),
         placeholder = {
                       Text(text = "Иван",
-                          color = Color.Black)
+                          color = gray_font)
         },
         label = {
             Text("Имя",
@@ -143,8 +146,10 @@ fun CustomTextFields_surname() {
         modifier = Modifier
             .fillMaxWidth(),
         placeholder = {
-                      Text(text = "Иванов",
-                          color = Color.Black)
+                      Text(
+                          text = "Иванов",
+                          style = textHint)
+
         },
         label = {
             Text("Фамилия",

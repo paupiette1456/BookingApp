@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.booking.ui.theme.circle
 import com.example.booking.ui.theme.gray_font
+import com.example.booking.ui.theme.textHint
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview
@@ -41,7 +42,7 @@ fun FieldBday(hint: String = "Дата рождения") {
             ) {
                 if (text.text.isEmpty()) {
                     Text(text = hint,
-                        color = gray_font
+                        style = textHint
                     )
                 }
                 innerTextField()
@@ -69,7 +70,7 @@ fun FieldCitizen(hint: String = "Гражданство") {
             ) {
                 if (text.text.isEmpty()) {
                     Text(text = hint,
-                        color = gray_font
+                        style = textHint
                     )
                 }
                 innerTextField()
@@ -96,7 +97,7 @@ fun FieldNumber(hint: String = "Номер загранпаспорта") {
             ) {
                 if (text.text.isEmpty()) {
                     Text(text = hint,
-                        color = gray_font
+                        style = textHint
                     )
                 }
                 innerTextField()
@@ -123,7 +124,7 @@ fun FieldExpired(hint: String = "Срок действия загранпасп�
             ) {
                 if (text.text.isEmpty()) {
                     Text(text = hint,
-                        color = gray_font
+                        style = textHint
                     )
                 }
                 innerTextField()

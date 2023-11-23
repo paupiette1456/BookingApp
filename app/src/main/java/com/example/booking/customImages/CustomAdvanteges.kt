@@ -32,7 +32,7 @@ fun Advantages() {
                 .fillMaxWidth()
                 .padding(top = 8.dp))
         {
-            Text(text = "Все включено",
+            Text(text = "3-я линия",
                 Modifier
                     .background(gray, shape = RoundedCornerShape(5.dp))
                     .padding(start = 10.dp, top = 5.dp, end = 10.dp, bottom = 5.dp),
@@ -43,7 +43,7 @@ fun Advantages() {
                     fontWeight = FontWeight.Medium)
             )
             Spacer(Modifier.width(8.dp))
-            Text(text = "Кондиционер",
+            Text(text = "Платный Wi-Fi в фойе",
                 Modifier
                     .background(gray, shape = RoundedCornerShape(5.dp))
                     .padding(start = 10.dp, top = 5.dp, end = 10.dp, bottom = 5.dp),
@@ -62,7 +62,7 @@ fun Advantages() {
                 .fillMaxWidth()
                 .padding(top = 8.dp))
         {
-            Text(text = "Все включено",
+            Text(text = "30 км до аэропорта",
                 Modifier
                     .background(gray, shape = RoundedCornerShape(5.dp))
                     .padding(start = 10.dp, top = 5.dp, end = 10.dp, bottom = 5.dp),
@@ -73,7 +73,7 @@ fun Advantages() {
                     fontWeight = FontWeight.Medium)
             )
             Spacer(Modifier.width(8.dp))
-            Text(text = "Кондиционер",
+            Text(text = "1 км до пляжа",
                 Modifier
                     .background(gray, shape = RoundedCornerShape(5.dp))
                     .padding(start = 10.dp, top = 5.dp, end = 10.dp, bottom = 5.dp),

@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -36,6 +37,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.booking.R
+import com.example.booking.customImages.Advantages
 import com.example.booking.customImages.ImageRate
 import com.example.booking.styledButtons.BlueButton
 import com.example.booking.styledCard.BottomCard
@@ -58,7 +60,8 @@ fun Home(
     Scaffold {
         Column(
             verticalArrangement = Arrangement.Center,
-            modifier = Modifier.verticalScroll(rememberScrollState())
+            modifier = Modifier
+                .verticalScroll(rememberScrollState())
         ) {
             Text(
                 text = "Отель",
@@ -87,7 +90,8 @@ fun Home(
                         .fillMaxWidth()
                 )
                 Image(
-                    painter = painterResource(id = R.drawable.segments), contentDescription = null,
+                    painter = painterResource(id = R.drawable.segments),
+                    contentDescription = null,
                     modifier = Modifier.padding(top = 260.dp, start = 150.dp)
                 )
 
@@ -149,23 +153,6 @@ fun Home(
 
             }
 
-            Spacer(modifier = Modifier.size(20.dp))
-
-
-
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(10.dp)
-                    .background(color = gray)
-                    .border(
-                        2.dp,
-                        color = gray,
-                        shape = RoundedCornerShape(5.dp)
-                    )
-
-            )
-
             Spacer(modifier = Modifier.height(16.dp))
             Text(
                 text = "Об отеле",
@@ -177,110 +164,38 @@ fun Home(
                     fontWeight = FontWeight.SemiBold
                 )
             )
-            Spacer(modifier = Modifier.height(20.dp))
 
-            Box(
-                modifier = Modifier
-                    .height(40.dp)
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
-            ) {
-                Row {
-                    Text(
-                        text = "3-я линия",
-                        Modifier
-                            .background(gray, shape = RoundedCornerShape(5.dp))
-                            .padding(top = 5.dp, end = 10.dp, bottom = 5.dp),
-                        style = TextStyle(
-                            fontSize = 16.sp,
-                            fontFamily = sfProDisplay,
-                            color = gray_font,
-                            fontWeight = FontWeight.Medium
-                        )
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
+                Column(
 
-                    Text(
-                        text = "Платный Wi-Fi в фойе",
-                        Modifier
-                            .background(gray, shape = RoundedCornerShape(5.dp))
-                            .padding(start = 16.dp, top = 5.dp, end = 10.dp, bottom = 5.dp),
-                        style = TextStyle(
-                            fontSize = 16.sp,
-                            fontFamily = sfProDisplay,
-                            color = gray_font,
-                            fontWeight = FontWeight.Medium
-                        )
-                    )
-                }
-
-
-            }
-            Row {
-                Text(
-                    text = "30 км до аэропорта",
-                    Modifier
-                        .background(gray, shape = RoundedCornerShape(5.dp))
-                        .padding(start = 16.dp, top = 5.dp, end = 10.dp, bottom = 5.dp),
-                    style = TextStyle(
-                        fontSize = 16.sp,
-                        fontFamily = sfProDisplay,
-                        color = gray_font,
-                        fontWeight = FontWeight.Medium
-                    )
-                )
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = "1 км до пляжа",
-                    Modifier
-                        .background(gray, shape = RoundedCornerShape(5.dp))
-                        .padding(start = 10.dp, top = 5.dp, end = 10.dp, bottom = 5.dp),
-                    style = TextStyle(
-                        fontSize = 16.sp,
-                        fontFamily = sfProDisplay,
-                        color = gray_font,
-                        fontWeight = FontWeight.Medium
-                    )
-                )
-            }
-            Spacer(modifier = Modifier.height(8.dp))
-            Box(
-                modifier = Modifier
-                    .height(75.dp)
-                    .fillMaxWidth()
-            ) {
-                Text(
-                    text = "Отель VIP-класса с собственными гольф полями. " +
-                            "Высокий уровнь сервиса. Рекомендуем для респектабельного отдыха. " +
-                            "Отель принимает гостей от 18 лет!",
-                    textAlign = TextAlign.Left,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.W400,
                     modifier = Modifier
-                        .padding(start = 16.dp, end = 16.dp)
-                        .fillMaxWidth()
-                )
-            }
-            Spacer(modifier = Modifier.height(8.dp))
+                        .padding(horizontal = 16.dp, vertical = 16.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Advantages()
+                    Text(
+                        text = "Отель VIP-класса с собственными гольф полями. " +
+                                "Высокий уровнь сервиса. Рекомендуем для респектабельного отдыха. " +
+                                "Отель принимает гостей от 18 лет!",
+                        textAlign = TextAlign.Left,
+                        fontFamily = sfProDisplay,
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.W400,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                    )
 
+
+                }
             BottomCard()
-
-
-
-
             Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .fillMaxHeight()
-                    .padding(vertical = 15.dp),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
             ) {
                 BlueButton(navController)
             }
 
-        }
 
+        }
     }
 
 }

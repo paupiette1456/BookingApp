@@ -9,4 +9,8 @@
     <string name="button_paidScreen">Супер!</string>
     <string name="number_pick">К выбору номера</string>
     <string name="data_customer">Эти данные никому не передаются. После оплаты мы вышлем чек на указанный вами номер и почту</string>
+    <string name="needed">Самое необходимое</string>
+    <string name="smile">Удобства</string>
+    <string name="checkMark">Что включено</string>
+    <string name="close">Что не включено</string>
 </resources>
